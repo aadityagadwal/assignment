@@ -1,0 +1,4 @@
+prompt,accuracy,json_validity_rate
+baseline,0.22580645161290322,1.0
+reason_then_classify,0.45161290322580644,1.0
+rubric,0.16129032258064516,1.0
