@@ -1,10 +1,10 @@
 Task 1 – Rating Prediction via Prompting
 
---Objective
+##Objective
 
 The goal of this task is to classify Yelp reviews into 1–5 star ratings using Large Language Models (LLMs), returning structured JSON output. The task focuses on prompt design, structured output reliability, and comparative evaluation across different prompting strategies.
 
---Dataset
+##Dataset
 
 The Yelp Reviews dataset was sourced from Kaggle.
 To ensure efficiency and stay within free-tier LLM rate limits, a representative subset of reviews was sampled using a fixed random seed.
@@ -15,7 +15,7 @@ Total prompt–review evaluations: 93 (31 reviews × 3 prompts)
 
 Sampling was performed consistently across all prompt variants to ensure a fair comparison.
 
---Prompting Approaches
+##Prompting Approaches
 
 Three distinct prompting strategies were designed and evaluated.
 
@@ -52,7 +52,7 @@ Encouraging intermediate reasoning often improves alignment with human judgment 
 Observation:
 This approach achieved the highest accuracy while maintaining perfect JSON validity, demonstrating the benefit of structured reasoning.
 
---Evaluation Methodology
+##Evaluation Methodology
 
 Each prompt was evaluated using the following metrics:
 
@@ -64,7 +64,7 @@ Reliability & Consistency: Stability of structured output across runs
 
 All prompts were evaluated on the same sampled dataset.
 
---RESULTS:
+##RESULTS:
 
 | Prompt Variant       | Accuracy | JSON Validity Rate |
 | -------------------- | -------- | ------------------ |
@@ -72,7 +72,7 @@ All prompts were evaluated on the same sampled dataset.
 | Rubric-Based         | 0.16     | 1.00               |
 | Reason-Then-Classify | 0.45     | 1.00               |
 
---Discussion & Trade-offs
+##Discussion & Trade-offs
 
 The baseline prompt provides a simple and reliable starting point but lacks sufficient guidance for nuanced sentiment interpretation.
 The rubric-based approach, while structured, proved too rigid for subjective reviews with mixed signals.
@@ -81,6 +81,6 @@ The reason-then-classify strategy consistently outperformed other approaches, hi
 
 Overall, the results demonstrate a clear trade-off between simplicity, rigidity, and reasoning-driven performance.
 
---LLM Usage
+3#LLM Usage
 
 Multiple LLM backends were explored during development. Due to free-tier rate limits, final evaluation was conducted using a stable LLM backend capable of handling batch evaluation efficiently. The evaluation pipeline is backend-agnostic and can be scaled to larger datasets with higher-throughput access.
