@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>User Feedback</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Submit Your Feedback</h2>
+
+      <label for="rating">Rating (Required)</label><br />
+      <select id="rating">
+        <option value="">Select rating</option>
+        <option value="1">⭐ 1 - Poor</option>
+        <option value="2">⭐⭐ 2 - Fair</option>
+        <option value="3">⭐⭐⭐ 3 - Good</option>
+        <option value="4">⭐⭐⭐⭐ 4 - Very Good</option>
+        <option value="5">⭐⭐⭐⭐⭐ 5 - Excellent</option>
+      </select>
+
+      <br /><br />
+
+      <label for="review">Review (Optional)</label><br />
+      <textarea
+        id="review"
+        rows="4"
+        cols="40"
+        placeholder="Write your review..."
+      ></textarea>
+
+      <br /><br />
+
+      <button id="submitBtn">Submit Feedback</button>
+
+      <div id="response" class="response-box"></div>
+
+      <script src="/static/user.js"></script>
+    </div>
+  </body>
+</html>

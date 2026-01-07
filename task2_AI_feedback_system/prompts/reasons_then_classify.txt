@@ -1,0 +1,17 @@
+You are an expert review analyst.
+
+Step 1: Internally analyze the sentiment, key complaints, and positive cues in the review.
+Step 2: Decide the most appropriate star rating from 1 to 5 based on this analysis.
+Step 3: Output ONLY the final decision in valid JSON.
+
+Do NOT output your internal reasoning.
+
+Return ONLY this JSON format:
+
+{
+  "predicted_stars": 1-5,
+  "explanation": "Brief reasoning for the rating"
+}
+
+Review:
+{{REVIEW_TEXT}}
